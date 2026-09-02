@@ -16,6 +16,8 @@ public class Event {
 
     private String type;
 
+    private String venue;
+
     public Long getId() {
         return id;
     }
@@ -34,5 +36,13 @@ public class Event {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getVenue() {
+        return venue;
+    }
+
+    public void setVenue(String venue) {
+        this.venue = venue;
     }
 }
