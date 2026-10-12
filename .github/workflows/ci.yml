@@ -26,25 +26,25 @@ jobs:
         working-directory: backend
         run: ./mvnw clean package -DskipTests
 
-    frontend:
-      runs-on: ubuntu-latest
+  frontend:
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        - name: Set up Node
-          uses: actions/setup-node@v4
-          with:
-            node-version: '24'
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
 
-        - name: Enable Corepack
-          run: corepack enable
+      - name: Enable Corepack
+        run: corepack enable
 
-        - name: Install dependencies
-          working-directory: frontend
-          run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        working-directory: frontend
+        run: pnpm install --frozen-lockfile
 
-        - name: Build frontend
-          working-directory: frontend
-          run: pnpm build      
+      - name: Build frontend
+        working-directory: frontend
+        run: pnpm build
