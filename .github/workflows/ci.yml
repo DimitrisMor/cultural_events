@@ -22,9 +22,9 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Build backend
+      - name: Build and test backend
         working-directory: backend
-        run: bash ./mvnw clean package -DskipTests
+        run: bash ./mvnw clean verify
 
   frontend:
     runs-on: ubuntu-latest
