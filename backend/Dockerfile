@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN ./mvnw package -DskipTests
+RUN bash ./mvnw package -DskipTests
 
 EXPOSE 8080
 
